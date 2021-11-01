@@ -5,13 +5,13 @@ import missions from '../data/missions';
 
 class Missions extends React.Component {
   render() {
-
     const missionCards = missions.map(({ name, year, country, destination }) => (
-      <MissionCard 
+      <MissionCard
+        key={ name }
         name={ name }
         year={ year }
         country={ country }
-        destination={ destination } 
+        destination={ destination }
       />));
 
     return (
@@ -19,7 +19,7 @@ class Missions extends React.Component {
         <Title headline="Missões" />
         <div>{ missionCards }</div>
       </div>
-    )
+    );
   }
 }
 
